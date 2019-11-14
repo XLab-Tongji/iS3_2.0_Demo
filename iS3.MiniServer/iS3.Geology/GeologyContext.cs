@@ -127,19 +127,18 @@ namespace iS3.Geology
         ///----------------------------------------------新增soil接口
 
 
-        ///---------------------------------------------新增strata接口
+        ///---------------------------------------------新增stratum接口
         /// 根据id获取工程土层数据
         /// <param name="project">项目名称</param>
         /// <param name="id">土层id</param>
-       [Route("strata")]
+       [Route("stratum")]
         [HttpGet]
-        public Strata getStrataById(string project, int id)
+        public List<Strata> getStratumList(string project)
         {
-            var repo = RepositoryForServer<Strata>.GetInstance(project);
-            return repo.Retrieve(id).Result;
-       }
-
-        ///----------------------------------------------新增strata接口
+            var repo = new RepositoryForServer<Strata>(project);
+            return repo.RetrieveAll().Result;
+        }
+        ///----------------------------------------------新增stratum接口
 
 
         /// <summary>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ProjectList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" XMax="13560000" XMin="13500000" YMax="3690000" YMin="3640000" UseGeographicMap="true" xmlns="clr-namespace:iS3.Core;assembly=iS3.Core">
+  <ProjectList.Locations>
+    <ProjectLocation ID="IS3" X="10517500" Y="3660000" Description="IS3" Default="false" />
+    <ProjectLocation ID="TEST" X="10611807.732497387" Y="3758934.1692789965" Description="" Default="false" DefinitionFile="TEST.xml" />
+    <ProjectLocation ID="iS3DemoTest" X="13046499.477533961" Y="3988819.2267502612" Description="demotest" Default="false" DefinitionFile="iS3DemoTest.xml" />
+  </ProjectList.Locations>
+</ProjectList>

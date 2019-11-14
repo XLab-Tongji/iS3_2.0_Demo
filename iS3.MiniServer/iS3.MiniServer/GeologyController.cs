@@ -25,7 +25,7 @@ namespace iS3.MiniServer
         public Borehole getBoreholeById(string project, int id)
         {
             var repo = RepositoryForServer<Borehole>.GetInstance(project);
-            return repo.Retrieve(id).Result;
+            return repo.RetrieveByID(id).Result;
         }
 
         ///---------------------------------------------新增soil接口
@@ -37,27 +37,41 @@ namespace iS3.MiniServer
         public SoilProperty getSoilPropertyById(string project, int id)
         {
             var repo = RepositoryForServer<SoilProperty>.GetInstance(project);
-            return repo.Retrieve(id).Result;
+            return repo.RetrieveByID(id).Result;
        }
+
+        [Route("soilproperty")]
+        [HttpGet]
+        public List<SoilProperty> getSoilPropertyList(string project)
+        {
+            var repo = new RepositoryForServer<SoilProperty>(project);
+            return repo.RetrieveAll().Result;
+        }
 
         ///----------------------------------------------新增soil接口
 
 
 
-        ///---------------------------------------------新增strata接口
+        ///---------------------------------------------新增stratum接口
         /// 根据id获取工程土层数据
         /// <param name="project">项目名称</param>
         /// <param name="id">土层id</param>
-       [Route("strata")]
+       [Route("stratum")]
+        [HttpGet]
+        public List<Strata> getStratumList(string project)
+        {
+            var repo = new RepositoryForServer<Strata>(project);
+            return repo.RetrieveAll().Result;
+        }
+
+        ///----------------------------------------------新增stratum接口
+        [Route("stratum")]
         [HttpGet]
         public Strata getStrataById(string project, int id)
         {
             var repo = RepositoryForServer<Strata>.GetInstance(project);
-            return repo.Retrieve(id).Result;
-       }
-
-        ///----------------------------------------------新增strata接口
-
+            return repo.RetrieveByID(id).Result;
+        }
 
 
         /// <summary>
@@ -67,13 +81,21 @@ namespace iS3.MiniServer
         /// <param name="objsid"></param>
         /// <param name="filter"></param>
         /// <returns></returns>
-    [Route("borehole")]
+        [Route("borehole")]
       [HttpGet]
        public List<Borehole> getBoreholeByObjs(string project, int objsid, string filter)
       {
            var repo = RepositoryForServer<Borehole>.GetInstance(project);
            return repo.RetrieveByObjs(objsid, filter).Result;
        }
+         [Route("borehole")]
+        [HttpGet]
+        public List<Borehole> getBoreholeList(string project)
+        {
+            var repo = new RepositoryForServer<Borehole>(project);
+            return repo.RetrieveAll().Result;
+        }
+    
         /// <summary>
         /// 新增borehole对象,连带其中的钻孔地层对象，如果有的话
         /// </summary>
