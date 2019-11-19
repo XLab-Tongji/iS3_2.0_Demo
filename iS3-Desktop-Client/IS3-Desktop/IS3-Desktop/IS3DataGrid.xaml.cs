@@ -64,7 +64,7 @@ namespace iS3.Desktop
                            if ((data as DGObject).Name == obj.Name)
                             {
                                 //DGObjSelectionChangedTrigger(this, args);
-                                DGObjectDataGrid.SelectedItem = data;
+                                DGObjectDataGrid.SelectedItems.Add(data);
                             }
                        }
                    }
