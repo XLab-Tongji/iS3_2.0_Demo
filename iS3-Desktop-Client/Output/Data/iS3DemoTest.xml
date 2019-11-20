@@ -1,29 +1,10 @@
 <Project>
-<ProjectDefinition 
-ID="iS3DemoTest" 
-ProjectTitle="iS3测试Demo" 
-DefaultMapID="BaseMap" 
-LocalFilePath="Data\iS3DemoTest" 
-LocalTilePath="Data\TPKs" 
-LocalDatabaseName="iS3DemoTest.mdb" 
-DataServiceUrl="{assembly:Null}" 
-GeometryServiceUrl="{assembly:Null}"
- xmlns="clr-namespace:iS3.Core;assembly=iS3.Core" 
- xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+<ProjectDefinition ID="iS3DemoTest" ProjectTitle="iS3DemoTest" DefaultMapID="{assembly:Null}" LocalFilePath="Data\iS3DemoTest" LocalTilePath="Data\TPKs" LocalDatabaseName="D:\is3\iS3_2.0_Demo-master\iS3_2.0_Demo-master\iS3_2.0_Demo-master\iS3_2.0_Demo-master\iS3-Desktop-Client\Output\Data\iS3DemoTest\iS3DemoTest.MDB" DataServiceUrl="{assembly:Null}" GeometryServiceUrl="{assembly:Null}" xmlns="clr-namespace:iS3.Core;assembly=iS3.Core" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
   <ProjectDefinition.EngineeringMaps>
-<EngineeringMap MapType="FootPrintMap" Calibrated="False" Scale="1" ScaleX="1" ScaleY="1" ScaleZ="1" MapID="Map0" LocalTileFileName1="tongji.tpk"
-                LocalTileFileName2="{assembly:Null}" LocalMapFileName="{assembly:Null}" LocalGeoDbFileName="tongji.geodatabase" MapUrl="{assembly:Null}"
-                XMax="13526240.820281375" XMin="13525908.833625743" YMax="3669644.9852709882" YMin="3669325.61410827" MinimumResolution="0" MapRotation="0"
-                xmlns="clr-namespace:iS3.Core;assembly=iS3.Core" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-  <EngineeringMap.LocalGdbLayersDef>
-    <LayerDef Name="Borehole" GeometryType="Point" IsVisible="True" Color="#FFFF0000" SelectionColor="#FFFF0000" MarkerSize="12" MarkerStyle="Circle" LineStyle="Solid" FillStyle="Solid"
-              OutlineColor="#FF000000" LineWidth="1" RendererDef="{assembly:Null}" EnableLabel="True" LabelTextExpression="[Name]" LabelWhereClause="{assembly:Null}"
-              LabelColor="#FF000000" LabelBackgroundColor="#00000000" LabelBorderLineColor="#00000000" LabelBorderLineWidth="0" LabelFontFamily="Arial" LabelFontSize="12" LabelFontStyle="Normal" LabelFontWeight="Normal" LabelTextDecoration="None"
-              xmlns="clr-namespace:iS3.Core;assembly=iS3.Core" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" />
-<LayerDef Name="B1" GeometryType="Polyline" IsVisible="True" Color="#FF008000" SelectionColor="#FFFF0000" MarkerSize="12" MarkerStyle="Circle" LineStyle="Solid" FillStyle="Solid" OutlineColor="#FF008000" LineWidth="1" RendererDef="{assembly:Null}" EnableLabel="False" LabelTextExpression="{assembly:Null}" LabelWhereClause="{assembly:Null}" LabelColor="#FF000000" LabelBackgroundColor="#00000000" LabelBorderLineColor="#00000000" LabelBorderLineWidth="0" LabelFontFamily="Arial" LabelFontSize="12" LabelFontStyle="Normal" LabelFontWeight="Normal" LabelTextDecoration="None"
-          xmlns="clr-namespace:iS3.Core;assembly=iS3.Core" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" />
-<LayerDef Name="Mon" GeometryType="Point" IsVisible="True" Color="#FFFF0000" SelectionColor="#FFFF0000" MarkerSize="12" MarkerStyle="Circle" LineStyle="Solid" FillStyle="Solid" OutlineColor="#FF000000" LineWidth="1" RendererDef="{assembly:Null}" EnableLabel="True" LabelTextExpression="[Name]" LabelWhereClause="{assembly:Null}" LabelColor="#FF000000" LabelBackgroundColor="#00000000" LabelBorderLineColor="#00000000" LabelBorderLineWidth="0" LabelFontFamily="Arial" LabelFontSize="12" LabelFontStyle="Normal" LabelFontWeight="Normal" LabelTextDecoration="None"
-xmlns="clr-namespace:iS3.Core;assembly=iS3.Core" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" />
+<EngineeringMap MapType="FootPrintMap" Calibrated="False" Scale="1" ScaleX="1" ScaleY="1" ScaleZ="1" MapID="Map0" LocalTileFileName1="tongji.tpk" LocalTileFileName2="{assembly:Null}" LocalMapFileName="{assembly:Null}" LocalGeoDbFileName="tongji.geodatabase" MapUrl="{assembly:Null}" XMax="13527374.886486448" XMin="13524718.993674662" YMax="3670398.5471424954" YMin="3668114.5746885533" MinimumResolution="0" MapRotation="0" xmlns="clr-namespace:iS3.Core;assembly=iS3.Core" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+  <EngineeringMap.LocalGdbLayersDef><LayerDef Name="Borehole" GeometryType="Point" IsVisible="True" Color="#FFFF0000" SelectionColor="#FFFF0000" MarkerSize="12" MarkerStyle="Circle" LineStyle="Solid" FillStyle="Solid" OutlineColor="#FF000000" LineWidth="1" RendererDef="{assembly:Null}" EnableLabel="True" LabelTextExpression="[Name]" LabelWhereClause="{assembly:Null}" LabelColor="#FF000000" LabelBackgroundColor="#00000000" LabelBorderLineColor="#00000000" LabelBorderLineWidth="0" LabelFontFamily="Arial" LabelFontSize="12" LabelFontStyle="Normal" LabelFontWeight="Normal" LabelTextDecoration="None" xmlns="clr-namespace:iS3.Core;assembly=iS3.Core" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" />
+<LayerDef Name="B1" GeometryType="Polyline" IsVisible="True" Color="#FF008000" SelectionColor="#FFFF0000" MarkerSize="12" MarkerStyle="Circle" LineStyle="Solid" FillStyle="Solid" OutlineColor="#FF008000" LineWidth="1" RendererDef="{assembly:Null}" EnableLabel="False" LabelTextExpression="{assembly:Null}" LabelWhereClause="{assembly:Null}" LabelColor="#FF000000" LabelBackgroundColor="#00000000" LabelBorderLineColor="#00000000" LabelBorderLineWidth="0" LabelFontFamily="Arial" LabelFontSize="12" LabelFontStyle="Normal" LabelFontWeight="Normal" LabelTextDecoration="None" xmlns="clr-namespace:iS3.Core;assembly=iS3.Core" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" />
+<LayerDef Name="Mon" GeometryType="Point" IsVisible="True" Color="#FFFF0000" SelectionColor="#FFFF0000" MarkerSize="12" MarkerStyle="Circle" LineStyle="Solid" FillStyle="Solid" OutlineColor="#FF000000" LineWidth="1" RendererDef="{assembly:Null}" EnableLabel="True" LabelTextExpression="[Name]" LabelWhereClause="{assembly:Null}" LabelColor="#FF000000" LabelBackgroundColor="#00000000" LabelBorderLineColor="#00000000" LabelBorderLineWidth="0" LabelFontFamily="Arial" LabelFontSize="12" LabelFontStyle="Normal" LabelFontWeight="Normal" LabelTextDecoration="None" xmlns="clr-namespace:iS3.Core;assembly=iS3.Core" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" />
 </EngineeringMap.LocalGdbLayersDef>
 </EngineeringMap>
 </ProjectDefinition.EngineeringMaps>
@@ -31,28 +12,30 @@ xmlns="clr-namespace:iS3.Core;assembly=iS3.Core" xmlns:assembly="http://schemas.
 
   <Domain Name="Geology" Type="Geology">
     <ObjsDefinition>
-      <Borehole Name="Allboreholes" TableNameSQL="Boreholes,BoreholeStrataInfo" OrderSQL="[Name]" HasGeometry="true" GISLayerName="Borehole" Has3D="true" Layer3DName="iS3Project/Borehole" />
-      <Stratum Name="AllStratum" TableNameSQL="Strata" HasGeometry="false" Has3D="false" />
-      <SoilProperty Name="AllSoilProperties" TableNameSQL="SoilProperties" HasGeometry="false" Has3D="false" />
+      <Borehole Name="Allboreholes" HasGeometry="true" GISLayerName="Borehole" Has3D="true" Layer3DName="iS3Project/Borehole" />
+      <Stratum Name="AllStratum" HasGeometry="false" Has3D="false" />
+      <SoilProperty Name="AllSoilProperties" HasGeometry="false" Has3D="false" />
     </ObjsDefinition>
     <TreeDefinition>
-      <Geology DisplayName="Geology" Desc="See geology report for complete information.">
-        <EngineeringGeology DisplayName="Engineering Geology" Desc="Engineering geology information">
-          <Borehole DisplayName="Boreholes" Desc="Select a borehole for detail." RefDomainName="Geology" RefObjsName="Allboreholes" />
-          <Stratum DisplayName="Stratum" Desc="Select a strata for detail." RefDomainName="Geology" RefObjsName="AllStratum" />
-          <SoilProperty DisplayName="Soil Properties" Desc="Select a soil for detail." RefDomainName="Geology" RefObjsName="AllSoilProperties" />
+      <Geology>
+        <EngineeringGeology DisplayName="Engineering Geology" RefDomainName="Geology" RefObjsName="monpoint">
+          <Borehole DisplayName="Boreholes" RefDomainName="Geology" RefObjsName="Allboreholes" />
+          <Stratum DisplayName="Stratum" RefDomainName="Geology" RefObjsName="AllStratum" />
+          <SoilProperty DisplayName="Soil Properties" RefDomainName="Geology" RefObjsName="AllSoilProperties" />
         </EngineeringGeology>
       </Geology>
     </TreeDefinition>
   </Domain>
   <Domain Name="Monitoring" Type="Monitoring">
     <ObjsDefinition>
-      <MonPoint Name="monpoint" TableNameSQL="Mon,MonData" OrderSQL="[ID],[time]" HasGeometry="true" GISLayerName="Mon" Has3D="true" Layer3DName="iS3Project/Mon" />
+      <MonPoint Name="monpoint" HasGeometry="true" GISLayerName="Mon" Has3D="true" Layer3DName="iS3Project/Mon" />
     </ObjsDefinition>
     <TreeDefinition>
-      <MonitoringItem DisplayName="监测">
-        <MonPoint DisplayName="监测点" RefDomainName="Monitoring" RefObjsName="monpoint" />
-      </MonitoringItem>
+      <Monitoring>
+        <MonitoringItem DisplayName="监测" RefDomainName="Monitoring">
+          <MonPoint DisplayName="监测点" RefDomainName="Monitoring" RefObjsName="monpoint" />
+        </MonitoringItem>
+      </Monitoring>
     </TreeDefinition>
   </Domain>
 </Project>

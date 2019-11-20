@@ -392,7 +392,8 @@ namespace iS3.Config
                 }
                 reader.Close();
 
-                // NOTE: add "dbo_" prefix of the table name!!!
+                
+                 /*// NOTE: add "dbo_" prefix of the table name!!!
                 //
                 foreach (Domain domain in proj.domains.Values)
                 {
@@ -401,6 +402,7 @@ namespace iS3.Config
                         // skip if the prefix already exist
                         if (objsDef.TableNameSQL.Contains(DbHelper.TablePrefix))
                             continue;
+                            
 
                         string str = "";
                         string[] names = objsDef.TableNameSQL.Split(DbHelper.Separator);
@@ -413,7 +415,7 @@ namespace iS3.Config
                         }
                         objsDef.TableNameSQL = str;
                     }
-                }
+                }*/
             }
             catch (Exception error)
             {

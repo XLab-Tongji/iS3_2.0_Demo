@@ -63,7 +63,6 @@ namespace iS3.Desktop
                         { 
                            if ((data as DGObject).Name == obj.Name)
                             {
-                                //DGObjSelectionChangedTrigger(this, args);
                                 DGObjectDataGrid.SelectedItems.Add(data);
                             }
                        }
@@ -76,16 +75,27 @@ namespace iS3.Desktop
         IEnumerable LastObjList = null;
         public  void DGObjectsSelectionChangedListener(object sender, DGObjectsSelectionChangedEventArgs e)
         {
+           
             DGObjects objs=e.addedObjs;
-            string domain = objs.parent.name;
-            string objtype = objs.definition.Type;
+            if(objs!=null)
+            {
+                string domain = objs.parent.name;
+                string objtype = objs.definition.Type;
 
-            //获取对应属性数据
-            Type objType = ObjectHelper.GetType(objs.parent.name, objs.definition.Type);
-            Type _t = typeof(ObjectHelper);
-            MethodInfo mi = _t.GetMethod("Convert").MakeGenericMethod(objType);
-            LastObjList = mi.Invoke(null, new object[] { objs.objContainer }) as IEnumerable;
-            DGObjectDataGrid.ItemsSource = LastObjList;
+                //获取对应属性数据
+                Type objType = ObjectHelper.GetType(objs.parent.name, objs.definition.Type);
+                Type _t = typeof(ObjectHelper);
+                MethodInfo mi = _t.GetMethod("Convert").MakeGenericMethod(objType);
+                LastObjList = mi.Invoke(null, new object[] { objs.objContainer }) as IEnumerable;
+                DGObjectDataGrid.ItemsSource = LastObjList;
+            }
+            else
+            {
+                
+                DGObjectDataGrid.ItemsSource=null;
+            }
+               
+            
         }
         private void DGObjectDataGrid_AutoGeneratingColumn(object sender,
             DataGridAutoGeneratingColumnEventArgs e)
