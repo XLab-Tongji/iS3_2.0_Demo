@@ -69,6 +69,12 @@ namespace iS3.Desktop
                    }
                 }
             }
+            if (e.removedObjs != null)
+            {
+                 foreach(var data in LastObjList){
+                    DGObjectDataGrid.SelectedItems.Remove(data as DGObject);
+                 }
+            }
             
 
         }
