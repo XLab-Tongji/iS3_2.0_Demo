@@ -70,7 +70,8 @@ namespace iS3.Config
             InitializePictureMarkerSymbol();
             MyMapView.Loaded += MyMapView_Loaded;
             MyMapView.MouseDown += MyMapView_MouseDown;
-
+            if (_projList==null)
+                return;
             foreach (ProjectLocation loc in _projList.Locations)
             {
                 ProjectListLB.Items.Add(loc);

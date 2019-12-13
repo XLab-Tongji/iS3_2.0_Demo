@@ -14,19 +14,8 @@ namespace iS3.MiniServer
     [AllowAnonymous]
     public class GeologyController : ApiController
     {
-        /// <summary>
-        /// 根据id获取工程钻孔数据
-        /// </summary>
-        /// <param name="project">项目名称</param>
-        /// <param name="id">钻孔id</param>
-        /// <returns> </returns>
-        [Route("borehole")]
-        [HttpGet]
-        public Borehole getBoreholeById(string project, int id)
-        {
-            var repo = RepositoryForServer<Borehole>.GetInstance(project);
-            return repo.RetrieveByID(id).Result;
-        }
+
+
 
         ///---------------------------------------------新增soil接口
         /// 根据id获取工程土质数据
@@ -39,6 +28,8 @@ namespace iS3.MiniServer
             var repo = RepositoryForServer<SoilProperty>.GetInstance(project);
             return repo.RetrieveByID(id).Result;
        }
+	    /// 获取全部工程土质数据
+        /// <param name="project">项目名称</param>
 
         [Route("soilproperty")]
         [HttpGet]
@@ -48,14 +39,22 @@ namespace iS3.MiniServer
             return repo.RetrieveAll().Result;
         }
 
-        ///----------------------------------------------新增soil接口
-
+	    ///----------------------------------------------新增soil接口
 
 
         ///---------------------------------------------新增stratum接口
         /// 根据id获取工程土层数据
         /// <param name="project">项目名称</param>
         /// <param name="id">土层id</param>
+	    [Route("stratum")]
+        [HttpGet]
+        public Strata getStrataById(string project, int id)
+        {
+            var repo = RepositoryForServer<Strata>.GetInstance(project);
+            return repo.RetrieveByID(id).Result;
+        }
+	    /// 获取全部工程土层数据
+        /// <param name="project">项目名称</param>
        [Route("stratum")]
         [HttpGet]
         public List<Strata> getStratumList(string project)
@@ -65,15 +64,34 @@ namespace iS3.MiniServer
         }
 
         ///----------------------------------------------新增stratum接口
-        [Route("stratum")]
+
+
+        /// <summary>
+        /// 根据id获取工程钻孔数据
+        /// </summary>
+        /// <param name="project">项目名称</param>
+        /// <param name="id">钻孔id</param>
+        /// <returns> </returns>
+        [Route("borehole")]
         [HttpGet]
-        public Strata getStrataById(string project, int id)
+        public Borehole getBoreholeById(string project, int id)
         {
-            var repo = RepositoryForServer<Strata>.GetInstance(project);
-            return repo.RetrieveByID(id).Result;
+            var repo = RepositoryForServer<Borehole>.GetInstance(project);
+            return repo.Retrieve(id).Result;
+        }
+        ///---------------------------------------------新增borehole接口
+
+        /// 获取全部钻孔数据
+        /// <param name="project">项目名称</param>
+        [Route("borehole")]
+        [HttpGet]
+        public List<Borehole> getBoreholeList(string project)
+        {
+            var repo = new RepositoryForServer<Borehole>(project);
+            return repo.RetrieveAll().Result;
         }
 
-
+	///----------------------------------------------新增borehole接口
         /// <summary>
         /// 根据对象组获取钻孔
         /// </summary>
@@ -82,20 +100,12 @@ namespace iS3.MiniServer
         /// <param name="filter"></param>
         /// <returns></returns>
         [Route("borehole")]
-      [HttpGet]
-       public List<Borehole> getBoreholeByObjs(string project, int objsid, string filter)
-      {
-           var repo = RepositoryForServer<Borehole>.GetInstance(project);
-           return repo.RetrieveByObjs(objsid, filter).Result;
-       }
-         [Route("borehole")]
         [HttpGet]
-        public List<Borehole> getBoreholeList(string project)
+        public List<Borehole> getBoreholeByObjs(string project, int objsid, string filter)
         {
-            var repo = new RepositoryForServer<Borehole>(project);
-            return repo.RetrieveAll().Result;
+            var repo = RepositoryForServer<Borehole>.GetInstance(project);
+            return repo.RetrieveByObjs(objsid, filter).Result;
         }
-    
         /// <summary>
         /// 新增borehole对象,连带其中的钻孔地层对象，如果有的话
         /// </summary>

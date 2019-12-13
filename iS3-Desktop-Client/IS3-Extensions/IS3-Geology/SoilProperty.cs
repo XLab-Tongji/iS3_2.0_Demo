@@ -42,18 +42,6 @@ namespace iS3.Geology
         public StratumSection()
         {
         }
-
-       /* public StratumSection(DataRow rawData)
-            :base(rawData)
-        {
-        }*/
-
-        /*public override bool LoadObjs(DGObjects objs, DbContext dbContext)
-        {
-            GeologyDGObjectLoader loader2 = new GeologyDGObjectLoader(dbContext);
-            bool success = loader2.LoadStratumSections(objs);
-            return success;
-        }*/
     }
 
     public class SoilProperty : DGObject
@@ -63,7 +51,6 @@ namespace iS3.Geology
         public SoilStaticProperty StaticProp { get; set; }
         public SoilDynamicProperty DynamicProp { get; set; }
 
-        
         // Use StratumSectionID:Name as the key
         public override string key
         {
@@ -78,20 +65,6 @@ namespace iS3.Geology
             StaticProp = new SoilStaticProperty();
             DynamicProp = new SoilDynamicProperty();
         }
-
-       /* public SoilProperty(DataRow rawData)
-            :base(rawData)
-        {
-            StaticProp = new SoilStaticProperty();
-            DynamicProp = new SoilDynamicProperty();
-        }*/
-
-       /* public override bool LoadObjs(DGObjects objs, DbContext dbContext)
-        {
-            GeologyDGObjectLoader loader2 = new GeologyDGObjectLoader(dbContext);
-            bool success = loader2.LoadSoilProperties(objs);
-            return success;
-        }*/
     }
 
     public class SoilStaticProperty

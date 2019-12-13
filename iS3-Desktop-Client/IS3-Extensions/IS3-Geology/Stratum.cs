@@ -8,6 +8,7 @@ using System.Data;
 using iS3.Core;
 using iS3.Core.Serialization;
 
+
 namespace iS3.Geology
 {
     #region Copyright Notice
@@ -38,26 +39,12 @@ namespace iS3.Geology
         public string GeologyAge { get; set; }
         public string FormationType { get; set; }
         public string Compaction { get; set; }
-        //public string ElevationRange { get; set; }
-        //public string ThicknessRange { get; set; }
-
-
         public string ElevationOfStratumBottom { get; set; }
         public string Thickness { get; set; }
 
         public Stratum()
         { }
 
-       /* public Stratum(DataRow rawData)
-            :base(rawData)
-        { }*/
-
-       /* public override bool LoadObjs(DGObjects objs, DbContext dbContext)
-        {
-            GeologyDGObjectLoader loader2 = new GeologyDGObjectLoader(dbContext);
-            bool success = loader2.LoadStrata(objs);
-            return success;
-        }*/
 
         public override string ToString()
         {
@@ -65,7 +52,7 @@ namespace iS3.Geology
 
             string str1 = string.Format(
                 ", GeoAge={0}, Formation={1}, Compaction={2}, ElevationRange={3}, ThicknessRange={4}",
-                GeologyAge, FormationType, Compaction,ElevationOfStratumBottom, Thickness);
+                GeologyAge, FormationType, Compaction, ElevationOfStratumBottom, Thickness);
             str += str1;
 
             return str;

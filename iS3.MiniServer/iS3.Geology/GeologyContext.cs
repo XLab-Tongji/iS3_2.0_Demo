@@ -85,10 +85,12 @@ namespace iS3.Geology
         public virtual DbSet<WEAT> WEAT { get; set; }
         public virtual DbSet<WITR> WITR { get; set; }
         public virtual DbSet<WSPA> WSPA { get; set; }
-        public virtual DbSet<SoilProperty> SoilProperty { get; set; }
-        public virtual DbSet<Strata>Strata { get; set; }
+
         public virtual DbSet<Borehole> Borehole { get; set; }
         public virtual DbSet<BoreholeStrata> BoreholeStrata { get; set; }
+        public virtual DbSet<Strata> Strata { get; set; }
+        public virtual DbSet<SoilProperty> SoilProperty { get; set; }
+
         public virtual DbSet<PROJ> PROJ { get; set; }
     }
 
@@ -110,37 +112,6 @@ namespace iS3.Geology
             var repo = RepositoryForServer<Borehole>.GetInstance(project);
             return repo.Retrieve(id).Result;
         }
-
-
-         ///---------------------------------------------新增soil接口
-        /// 根据id获取工程土质数据
-        /// <param name="project">项目名称</param>
-        /// <param name="id">土质id</param>
-       [Route("soilproperty")]
-        [HttpGet]
-        public SoilProperty getSoilPropertyById(string project, int id)
-        {
-            var repo = RepositoryForServer<SoilProperty>.GetInstance(project);
-            return repo.Retrieve(id).Result;
-       }
-
-        ///----------------------------------------------新增soil接口
-
-
-        ///---------------------------------------------新增stratum接口
-        /// 根据id获取工程土层数据
-        /// <param name="project">项目名称</param>
-        /// <param name="id">土层id</param>
-       [Route("stratum")]
-        [HttpGet]
-        public List<Strata> getStratumList(string project)
-        {
-            var repo = new RepositoryForServer<Strata>(project);
-            return repo.RetrieveAll().Result;
-        }
-        ///----------------------------------------------新增stratum接口
-
-
         /// <summary>
         /// 根据对象组获取钻孔
         /// </summary>

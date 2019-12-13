@@ -1,4 +1,4 @@
-﻿using iS3.Core;
+using iS3.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;

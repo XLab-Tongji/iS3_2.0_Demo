@@ -39,8 +39,4 @@ namespace iS3.Geology
         public override string provider() { return "Tongji iS3 team"; }
         public override string version() { return "1.0"; }
     }
-
-
-    
-    
 }

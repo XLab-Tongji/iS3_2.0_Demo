@@ -112,6 +112,8 @@ namespace iS3.Config
             //
             string projListFile = dataPath + "\\ProjectList.xml";
             ProjectList projList = ConfigCore.LoadProjectList(projListFile);
+            if (projList == null)
+                projList = new ProjectList();
             ProjectsWindow projsWnd = new ProjectsWindow(projList);
             projsWnd.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             success = projsWnd.ShowDialog();
@@ -162,9 +164,7 @@ namespace iS3.Config
             List<EMapLayers> eMapLayersList = projEMapsDefWnd.EMapLayersList;
             Project prj = ConfigCore.LoadProject(dataPath, projID);
             if (prj == null)
-            {
                 prj = new Project();
-            }
             DomainDefWindow domainDefWnd = new DomainDefWindow(projDef, prj, eMapLayersList);
             domainDefWnd.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             success = domainDefWnd.ShowDialog();

@@ -8,7 +8,6 @@ using System.Data;
 using iS3.Core;
 using iS3.Core.Serialization;
 
-
 namespace iS3.Geology
 {
     #region Copyright Notice
@@ -39,9 +38,7 @@ namespace iS3.Geology
         public Water()
         { }
 
-        /*public Water(DataRow rawData)
-            :base(rawData)
-        { }*/
+       
     }
 
     public class RiverWater : Water
@@ -60,16 +57,7 @@ namespace iS3.Geology
         public RiverWater()
         { }
 
-        /*public RiverWater(DataRow rawData)
-            :base(rawData)
-        { }*/
-
-        /*public override bool LoadObjs(DGObjects objs, DbContext dbContext)
-        {
-            GeologyDGObjectLoader loader2 = new GeologyDGObjectLoader(dbContext);
-            bool success = loader2.LoadRiverWaters(objs);
-            return success;
-        }*/
+  
     }
 
     public class PhreaticWater : Water
@@ -89,16 +77,7 @@ namespace iS3.Geology
         public PhreaticWater()
         { }
 
-       /* public PhreaticWater(DataRow rawData)
-            : base(rawData)
-        { }*/
-
-       /* public override bool LoadObjs(DGObjects objs, DbContext dbContext)
-        {
-            GeologyDGObjectLoader loader2 = new GeologyDGObjectLoader(dbContext);
-            bool success = loader2.LoadPhreaticWaters(objs);
-            return success;
-        }*/
+       
     }
 
     public class ConfinedWater : Water
@@ -124,16 +103,7 @@ namespace iS3.Geology
         public ConfinedWater()
         { }
 
-      /*  public ConfinedWater(DataRow rawData)
-            : base(rawData)
-        { }*/
-
-        /*public override bool LoadObjs(DGObjects objs, DbContext dbContext)
-        {
-            GeologyDGObjectLoader loader2 = new GeologyDGObjectLoader(dbContext);
-            bool success = loader2.LoadConfinedWaters(objs);
-            return success;
-        }*/
+       
     }
 
     public class WaterProperty : DGObject
@@ -158,15 +128,6 @@ namespace iS3.Geology
         public WaterProperty()
         { }
 
-       /* public WaterProperty(DataRow rawData)
-            : base(rawData)
-        { }*/
-
-       /* public override bool LoadObjs(DGObjects objs, DbContext dbContext)
-        {
-            GeologyDGObjectLoader loader2 = new GeologyDGObjectLoader(dbContext);
-            bool success = loader2.LoadWaterProperties(objs);
-            return success;
-        }*/
+        
     }
 }

@@ -32,11 +32,13 @@ namespace iS3.Config
         private void DomainTypeCB_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Result.name = Result.type.ToString();
+           
             DomainNameTB.Text = Result.name;
         }
 
         private void OKBtn_Click(object sender, RoutedEventArgs e)
         {
+            Result = new Domain(Result.type.ToString(), Result.type);
             DialogResult = true;
             Close();
         }

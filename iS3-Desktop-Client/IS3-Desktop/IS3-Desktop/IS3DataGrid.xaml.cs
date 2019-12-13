@@ -59,25 +59,30 @@ namespace iS3.Desktop
                 {
                     foreach (DGObject obj in e.addedObjs[key])
                     {
-                       foreach (var data in LastObjList)
-                        { 
-                           if ((data as DGObject).Name == obj.Name)
+                        foreach (var data in LastObjList)
+                        {
+                            if ((data as DGObject).Name == obj.Name)
                             {
                                 DGObjectDataGrid.SelectedItems.Add(data);
                             }
-                       }
-                   }
+                        }
+                    }
                 }
             }
-            
+            if (e.removedObjs != null)
+            {
+                foreach (var data in LastObjList)
+                {
+                    DGObjectDataGrid.SelectedItems.Remove(data as DGObject);
+                }
+            }
 
         }
         IEnumerable LastObjList = null;
         public  void DGObjectsSelectionChangedListener(object sender, DGObjectsSelectionChangedEventArgs e)
         {
-           
             DGObjects objs=e.addedObjs;
-            if(objs!=null)
+            if (objs != null)
             {
                 string domain = objs.parent.name;
                 string objtype = objs.definition.Type;
@@ -91,11 +96,9 @@ namespace iS3.Desktop
             }
             else
             {
-                
-                DGObjectDataGrid.ItemsSource=null;
+
+                DGObjectDataGrid.ItemsSource = null;
             }
-               
-            
         }
         private void DGObjectDataGrid_AutoGeneratingColumn(object sender,
             DataGridAutoGeneratingColumnEventArgs e)
@@ -180,6 +183,8 @@ namespace iS3.Desktop
             List<DGObject> removedObjs = new List<DGObject>();
             DGObject selectOne = DGObjectDataGrid.SelectedItem as DGObject;
             //select the selected one
+            if (selectOne == null)
+                return;
             if ((_lastObj != null) && (_lastObj.Name == selectOne.Name)) return;
             addedObjs.Add(selectOne);
             if (_lastObj != null)

@@ -82,10 +82,10 @@ namespace iS3.Geology.Server
         public virtual DbSet<WEAT> WEAT { get; set; }
         public virtual DbSet<WITR> WITR { get; set; }
         public virtual DbSet<WSPA> WSPA { get; set; }
-        public virtual DbSet<SoilProperty>SoilProperty { get; set; }
-        public virtual DbSet<Strata>Strata { get; set; }
+
         public virtual DbSet<Borehole> Borehole { get; set; }
         public virtual DbSet<BoreholeStrata> BoreholeStrata { get; set; }
+       
         public virtual DbSet<PROJ> PROJ { get; set; }
     }
 }

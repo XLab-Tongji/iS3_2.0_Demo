@@ -21,6 +21,9 @@ namespace iS3.Config
         {
             try
             {
+                if (!File.Exists(fileName))
+                    return null;
+
                 // Load ProjectList.xml using XamlReader
                 StreamReader reader = new StreamReader(fileName);
                 object obj = XamlReader.Load(reader.BaseStream);
@@ -309,10 +312,10 @@ namespace iS3.Config
             XElement xe = new XElement(objDef.Type);
 
             xe.Add(new XAttribute("Name", objDef.Name));
-
+            /*
             // NOTE: remove "dbo_" prefix of the table name!!!
             //
-            /*string tableName = objDef.TableNameSQL.Replace(DbHelper.TablePrefix, "");
+            string tableName = objDef.TableNameSQL.Replace(DbHelper.TablePrefix, "");
             xe.Add(new XAttribute("TableNameSQL", tableName));
 
             if (objDef.DefNamesSQL != null)
@@ -321,7 +324,7 @@ namespace iS3.Config
                 xe.Add(new XAttribute("ConditionSQL", objDef.ConditionSQL));
             if (objDef.OrderSQL != null)
                 xe.Add(new XAttribute("OrderSQL", objDef.OrderSQL));
-                */
+*/
             xe.Add(new XAttribute("HasGeometry", objDef.HasGeometry));
             if (objDef.GISLayerName != null)
                 xe.Add(new XAttribute("GISLayerName", objDef.GISLayerName));
@@ -391,9 +394,8 @@ namespace iS3.Config
                     proj.domains.Add(domain.name, domain);
                 }
                 reader.Close();
-
-                
-                 /*// NOTE: add "dbo_" prefix of the table name!!!
+                /*
+                // NOTE: add "dbo_" prefix of the table name!!!
                 //
                 foreach (Domain domain in proj.domains.Values)
                 {
@@ -402,7 +404,6 @@ namespace iS3.Config
                         // skip if the prefix already exist
                         if (objsDef.TableNameSQL.Contains(DbHelper.TablePrefix))
                             continue;
-                            
 
                         string str = "";
                         string[] names = objsDef.TableNameSQL.Split(DbHelper.Separator);

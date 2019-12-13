@@ -68,6 +68,8 @@
     <Compile Include="Model\BOHO.cs" />
     <Compile Include="Model\Borehole.cs" />
     <Compile Include="Model\BoreholeStrata.cs" />
+    <Compile Include="Model\SoilProperty.cs"/>
+    <Compile Include="Model\Strata.cs"/>
     <Compile Include="Model\CDEM.cs" />
     <Compile Include="Model\CONT.cs" />
     <Compile Include="Model\CORE.cs" />
@@ -113,13 +115,11 @@
     <Compile Include="Model\SCPG.cs" />
     <Compile Include="Model\SDEM.cs" />
     <Compile Include="Model\SDEN.cs" />
-    <Compile Include="Model\SoilProperty.cs" />
     <Compile Include="Model\SPEC.cs" />
     <Compile Include="Model\SPPO.cs" />
     <Compile Include="Model\SPTR.cs" />
     <Compile Include="Model\SSAT.cs" />
     <Compile Include="Model\STRA.cs" />
-    <Compile Include="Model\Strata.cs" />
     <Compile Include="Model\TDEM.cs" />
     <Compile Include="Model\TREG.cs" />
     <Compile Include="Model\TRET.cs" />

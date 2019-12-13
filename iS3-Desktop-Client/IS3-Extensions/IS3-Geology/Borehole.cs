@@ -49,7 +49,6 @@ namespace iS3.Geology
         public List<BoreholeGeology> Geologies { get; set; }
 
 
-       
         public Nullable<int> StratumSection { get; set; }
         public Nullable<int> SectionSequence { get; set; }
         public string BoreholeType { get; set; }
@@ -57,31 +56,27 @@ namespace iS3.Geology
         public double BoreholeLength { get; set; }
         public Nullable<double> Xcoordinate { get; set; }
         public Nullable<double> Ycoordinate { get; set; }
-       
+
+
+
+
+        
+
+
 
         public Borehole()
         {
             Geologies = new List<BoreholeGeology>();
         }
 
-       /* public Borehole(DataRow rawData)
-            :base(rawData)
-        {
-            Geologies = new List<BoreholeGeology>();
-        }*/
 
-       /* public override bool LoadObjs(DGObjects objs, DbContext dbContext)
-        {
-            GeologyDGObjectLoader loader = new GeologyDGObjectLoader(dbContext);
-            bool success = loader.LoadBoreholes(objs);
-            return success;
-        }*/
+       
 
         public override string ToString()
         {
             string str = base.ToString();
 
-            string str1 = string.Format(
+           string str1 = string.Format(
                 ", Top={0}, Base={1}, Mileage={2}, Type={3}, Geo=",
                 Top, Base, Mileage, Type);
             str += str1;
@@ -94,21 +89,7 @@ namespace iS3.Geology
             return str;
         }
 
-        /*public override List<DataView> tableViews(IEnumerable<DGObject> objs)
-        {
-            List<DataView> dataViews = base.tableViews(objs);
-
-            if (parent.rawDataSet.Tables.Count > 1)
-            {
-                DataTable table = parent.rawDataSet.Tables[1];
-                string filter = idFilter(objs);
-                DataView view = new DataView(table, filter, "[BoreholeID]",
-                    DataViewRowState.CurrentRows);
-                dataViews.Add(view);
-            }
-
-            return dataViews;
-        }*/
+  
 
         string idFilter(IEnumerable<DGObject> objs)
         {
@@ -122,7 +103,7 @@ namespace iS3.Geology
             return sql;
         }
 
-        /*public override List<FrameworkElement> chartViews(
+        public override List<FrameworkElement> chartViews(
             IEnumerable<DGObject> objs, double width, double height)
         {
             List<FrameworkElement> charts = new List<FrameworkElement>();
@@ -147,6 +128,6 @@ namespace iS3.Geology
             charts.Add(bhsView);
 
             return charts;
-        }*/
+        }
     }
 }
